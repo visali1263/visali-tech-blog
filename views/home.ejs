@@ -1,0 +1,43 @@
+<%- include("partials/header"); -%>
+
+
+<title>Visali's Blog - home</title>
+<header class="masthead" style="background-image: url('assets/img/home-bg.jpg?h=ed6236475a1226b743bf65e6f1bebb34');"><div class="overlay"></div><div class="container"><div class="row"><div class="col-md-10 col-lg-8 mx-auto position-relative"><div class="site-heading"><h1><br /><strong>Tech Blog!!!</strong></h1><span class="subheading">Conversation is king. Content is just something to talk about :)<br /></span></div></div></div></div></header><div class="container">
+    <div class="row">
+    <div class="col-md-10 col-lg-8">
+        
+        <!-- <div class="post-preview"><a href="/post_1">
+                <h2 class="post-title">How to get internship from IIT Indore ?</h2>
+            </a>
+            <p class="post-meta">Posted by <a href="#">visali on Apr 15, 2023</a></p>
+        </div>
+        <hr />
+        <div class="post-preview"><a href="/post_2">
+                <h2 class="post-title"> How I created my portfolio website ?</h2>
+            </a>
+            <p class="post-meta">Posted by <a href="#">visali on May 26, 2023</a></p>
+        </div>
+        <hr />
+        <div class="post-preview"><a href="/post_3">
+                <h2 class="post-title">Github Student Developer pack !!!</h2>
+                <h3 class="post-subtitle">Check it out guyss!!</h3>
+            </a>
+            <p class="post-meta">Posted by <a href="#">visali on May 24, 2023</a></p>
+        </div>
+        <hr /> -->
+        <% content.forEach(function(post){ %>
+            <div class="post-preview">
+                <a href="/posts/<%= post.title %>">
+                    <h2 class="post-title"><%= post.title %></h2>
+                    <h3 class="post-subtitle"><%= post.post %></h3>
+                <p class="post-meta">Posted by&nbsp;<a href="#">visali on <%= post.date %></a></p>
+            </div>
+            <hr>
+        <% }); %>
+        <a href="/older-posts">
+        <div class="clearfix"><button class="btn btn-primary float-end" type="button">Older Posts ⇒</button></div>
+        </a>
+    </div>
+</div>
+
+<%- include("partials/footer"); -%>

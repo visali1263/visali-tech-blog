@@ -1,0 +1,33 @@
+<!-- <%- include("partials/header"); -%>
+
+    <body>
+                                <div class="container"><div class="row"><div class="col-md-10 col-lg-8 mx-auto position-relative"><div class="site-heading">
+                                    <h1>older-posts</h1><span class="subheading"></span></div></div></div></div></header>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-10 col-lg-8 mx-auto">
+    <p>older posts will display here</p>
+</div></div></div><hr>
+<%-include("partials/footer")-%> -->
+
+<%- include("partials/header") -%>
+
+<div style="margin-top:40px" class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-8">
+            <% content.forEach(function(post){ %>
+                <div class="post-preview">
+                    <a href="/posts/<%= post.title %>">
+                        <h2 class="post-title"><%= post.title %></h2>
+                        <h3 class="post-subtitle"><%= post.post %></h3>
+                    </a>
+                    <p class="post-meta">Posted by&nbsp;<a href="#">Visali on <%= post.date %></a></p>
+                </div>
+                <hr>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+
+<%- include("partials/footer") -%>
