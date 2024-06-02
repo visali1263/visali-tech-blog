@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors(
   {
-    origin: [""],
+    origin: ["https://visali-tech-blog.vercel.app/"],
     methods: ["POST","GET"],
     credentials: true
   }
