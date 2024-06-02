@@ -2,11 +2,20 @@ require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
+const cors=require("cors");
 const lo = require("lodash");
 const ejs=require("ejs");
 const mongoose = require("mongoose");
 
 const app = express();
+
+app.use(cors(
+  {
+    origin: [""],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+));
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
